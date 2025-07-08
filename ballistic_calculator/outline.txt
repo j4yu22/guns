@@ -1,0 +1,44 @@
+Ballistic Calculator feature list:
+    Factors to include:
+        Muzzle Velocity (fps) – Initial speed of the bullet.
+        Bullet Weight (grains) – Needed to calculate energy and some drag models.
+        Ballistic Coefficient (G1/G7) – Determines how quickly the bullet slows due to air resistance.
+        Distance to Target (yards/meters) – Simulation runs from 0 to this range
+        Wind Speed/Direction – Affects lateral drift.
+        Atmospheric Conditions (altitude, temp, humidity) – Used to compute air density.
+        Scope Height & Zero Distance – Affects trajectory relative to line of sight.
+        Spin Drift, Coriolis – Advanced adjustments past ~800m.
+        MOA/MIL Reticle Info – For outputting drop/drift in reticle units.
+
+    calibrator
+        user sets phone down on the flat surface on which they are shooting (table, mat, ground, etc).
+        the phone should note its current vertical angle in order to be able to find it in the next step
+
+        user puts the target in the center of the phone camera, the app should use a compass to determine 
+        which way they are looking, find the vertical angle which the phone is pointing to find elevation
+        angle
+
+    weapon profile
+        user can enter data about their weapon, such as barrel length, barrel twist rate, barrel material,
+        muzzle brake, height over bore, scope zero, etc
+
+    ammo profile
+        user can enter data about ammo they shoot, such as caliber, grain weight, powder load, G1 and G7 BC,
+        bullet length, etc. The user should also be able to select their ammo if its factory made, which 
+        should fill this data from a database/google sheet
+
+    atmospheric data collector
+        pull data from a weather app API to determine windspeed/direction, altitude, temp, and humidity
+
+    advanced variable Calculator
+        uses data from weapon and ammo profiles to find more advanced variables, such as total flight time,
+        coriolis effect, spin drift, bullet stability, crosswind, MOA confidence, etc
+
+    single target Calculator
+        user selects weapon and ammo profile, specifies exact range to target, and calibrates phone to target.
+        calculator gives back exact MOA adjustments for Up/Down, L/R, as well as a calculation confidence
+        measurment in MOA range
+
+    dope card display
+        user selects weapon and ammo profile, and calibrates phone towards shooting range/targets. full page
+        graph display dope card displays with color coded key for MOA confidence ranges
