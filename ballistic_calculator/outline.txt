@@ -32,7 +32,7 @@ Ballistic Calculator feature list:
 
     advanced variable Calculator
         uses data from weapon and ammo profiles to find more advanced variables, such as total flight time,
-        coriolis effect, spin drift, bullet stability, crosswind, MOA confidence, etc
+        coriolis effect, spin drift, bullet stability, crosswind, MOA confidence, bullet energy at impact, etc
 
     single target Calculator
         user selects weapon and ammo profile, specifies exact range to target, and calibrates phone to target.
@@ -42,3 +42,15 @@ Ballistic Calculator feature list:
     dope card display
         user selects weapon and ammo profile, and calibrates phone towards shooting range/targets. full page
         graph display dope card displays with color coded key for MOA confidence ranges
+
+    import/export/save
+        ability to import, export, and save dope cards, weapon profiles, and ammo profiles
+
+    manual override
+        let user manually override factors that are determined automatically via atmospheric data collector,
+        calibration, or advanced variable calculator
+
+Other ideas:
+    ammo database builder, most likely by site scraping ammo.com 
+
+    implement mantis to show the user if they pulled a shot
