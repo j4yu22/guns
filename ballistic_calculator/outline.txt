@@ -54,3 +54,71 @@ Other ideas:
     ammo database builder, most likely by site scraping ammo.com 
 
     implement mantis to show the user if they pulled a shot
+
+Factors
+    cache (non changing during flight)
+        bullet weight
+        ballistic coefficient (G1 or G7)
+        crosswind
+        temperature (Kelvin)
+        humidity
+        altitude
+        gravity
+        scope height
+        scope zero 
+
+    calculate (changing throughout flight)
+        velocity (FPS)
+        bullet stability
+        calculation confidence (MOA)
+        energy
+        flight time
+        coriolis
+        spin drift
+        drop (y)
+        drift (x)
+
+Pages
+    home : https://wireframe.cc/tSWHLo
+    single target : https://wireframe.cc/shEf3R
+    dope card : https://wireframe.cc/1ozHUO
+    profile : https://wireframe.cc/GEla7O
+    
+File structure
+lib
+    main.dart
+    page 
+        home_ui.dart
+        target_ui.dart
+        chart_ui.dart
+        profile_ui.dart
+    
+    factor 
+        static.dart
+        dynamic.dart
+
+    calculate
+        simulate_yard.dart
+        target.dart
+        chart.dart
+    
+    service
+        weather_api.dart
+        calibrate.dart
+        convert_unit.dart
+
+    profile
+        weapon
+            weapon.dart
+            weapons.json
+
+        ammo
+            ammo.dart
+            ammos.json
+
+    ui 
+        new_weapon.dart
+        new_ammo.dart
+        settings.dart
+        header.dart
+        footer.dart
